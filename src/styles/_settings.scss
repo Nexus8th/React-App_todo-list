@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+$font-1: 'Fredoka', sans-serif;
+$color-1: #f82323;
+$color-2: #4cc043;
+$color-3: #282C34;
+$color-4: #61DAFB;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    background-color: $color-3;
+    position: relative;
+    font-family: $font-1;
+}
