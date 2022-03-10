@@ -50,6 +50,17 @@
             font-smooth: antialiased;
             box-shadow: 3px 2px 6px $color-6;
             cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover {
+                color: $color-4;
+                box-shadow: 3px 2px 6px $color-4;
+                transition: all 0.5s;
+            }
+
+            &:active {
+                transform: translateY(0.1rem);
+            }
         }
     }
 }

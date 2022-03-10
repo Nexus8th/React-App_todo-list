@@ -1,7 +1,8 @@
 import React from 'react';
 import Logo from './components/Logo';
 import Todo from './components/Todo';
-import Home from './pages/Home';
+import Home from './components/Title';
+import NewTodo from './components/NewTodo';
 
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
       <Home/>
       <Logo/>
       <Todo/>
+      <NewTodo/>
     </div>
   );
 };

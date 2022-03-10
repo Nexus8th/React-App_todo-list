@@ -17,6 +17,7 @@
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  box-shadow: 2px 2px 20px $color-4;
 }
 
 .react-logo,
@@ -28,6 +29,7 @@
   height: 40px;
   border-radius: 50%;
   border: 6px solid #00d8ff;
+  box-shadow: 2px 2px 20px $color-4;
 }
 
 .nucleo,
@@ -44,6 +46,7 @@
   height: 20px;
   border-radius: 100%;
   background: #00d8ff;
+  box-shadow: 2px 2px 20px $color-4;
 }
 
 .react-logo:before,
