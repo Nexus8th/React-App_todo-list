@@ -1,0 +1,55 @@
+.todo-container {
+    width: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10rem;
+    margin: 0;
+    padding: 0;
+
+    .form {
+        position: relative;
+        display: flex;
+
+        input, button {
+            appearance: none;
+            border: none;
+            outline: none;
+            background: none;
+        }
+        
+        .form-input-text {
+            flex: 1 1 0%;
+            background-color: $color-5;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-right: 1rem;
+            color: $color-4;
+            font-size: 1.25rem;
+            box-shadow: 3px 2px 6px $color-4;
+            font-family: $font-1;
+            font-smooth: antialiased;
+        }
+        .form-input-text::placeholder {
+            color: $color-4;
+            opacity: 30%;
+            font-family: $font-1;
+            font-smooth: antialiased;
+        }
+
+        .form-add-btn {
+            flex: 1 1 0%;
+            background-color: $color-5;
+            padding: 1rem;
+            border-radius: 1rem;
+            color: $color-6;
+            font-size: 1.25rem;
+            align-self: center;
+            font-family: $font-1;
+            font-smooth: antialiased;
+            box-shadow: 3px 2px 6px $color-6;
+            cursor: pointer;
+        }
+    }
+}
