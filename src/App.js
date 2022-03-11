@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from './components/Logo';
-import Todo from './components/Todo';
+import Form from './components/Form';
 import Home from './components/Title';
 import NewTodo from './components/NewTodo';
 
 
 const App = () => {
+
+const [inputText, setInputText] = useState("");
+const [todos, setTodos] = useState([]);
+
   return (
     <div>
       <Home/>
       <Logo/>
-      <Todo/>
+      <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText}/>
       <NewTodo/>
     </div>
   );

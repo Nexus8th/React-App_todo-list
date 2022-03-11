@@ -1,10 +1,8 @@
-import React from 'react';
-
 const Logo = () => {
     return (
        <div className="container">
-            <span class="react-logo">
-		        <span class="nucleo"></span>
+            <span className="react-logo">
+		        <span className="nucleo"></span>
 		    </span>
        </div>
     );

@@ -1,11 +1,12 @@
-import React from 'react';
+import Todo from "./Todo";
 
 const NewTodo = () => {
 
-    
+
     return (
-        <div>
-            
+        <div className="new-todo-container">
+            <ul className="new-todo"></ul>
+            <Todo/>
         </div>
     );
 };
