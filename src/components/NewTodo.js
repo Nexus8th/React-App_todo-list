@@ -1,12 +1,15 @@
 import Todo from "./Todo";
 
-const NewTodo = () => {
+const NewTodo = ({ todos, setTodos }) => {
 
 
     return (
         <div className="new-todo-container">
-            <ul className="new-todo"></ul>
-            <Todo/>
+            <ul className="new-todo">
+                {todos.map((todo) => (
+                    <Todo setTodos={setTodos} todos={todos} key={todo.id} text={todo.text}/>
+                ))}
+            </ul>
         </div>
     );
 };

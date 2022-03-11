@@ -15,7 +15,7 @@ const [todos, setTodos] = useState([]);
       <Home/>
       <Logo/>
       <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText}/>
-      <NewTodo/>
+      <NewTodo setTodos={setTodos} todos={todos}/>
     </div>
   );
 };
