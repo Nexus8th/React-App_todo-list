@@ -5,8 +5,8 @@ const inputTextField = (e) => {
 };
 const submitTodo = (e) => {
     e.preventDefault();
-    setTodos([...todos, {text: inputText, id: Math.random() * 100000 }]);
     setInputText("");
+    setTodos([...todos, {text: inputText, id: Math.random() * 100000, completed: false }]);
 }
 
     return (
