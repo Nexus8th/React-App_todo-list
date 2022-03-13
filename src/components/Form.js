@@ -1,14 +1,21 @@
 const Todo = ({ setInputText, todos, setTodos, inputText }) => {
+  
   const inputTextField = (e) => {
     setInputText(e.target.value);
   };
+  
   const submitTodo = (e) => {
     e.preventDefault();
-    setTodos([
-      ...todos,
-      { text: inputText, id: Math.random() * 100000, completed: false },
-    ]);
-    setInputText("");
+    if ( inputText === undefined || inputText === "") return {
+      
+    };
+    console.log(alert);
+    
+      setTodos([
+        ...todos,
+        { text: inputText, id: Math.random() * 100000, completed: false },
+      ]);
+      setInputText("");
   };
 
   return (

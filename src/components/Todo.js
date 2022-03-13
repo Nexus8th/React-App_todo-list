@@ -1,8 +1,11 @@
 const Todo = ({ text, todo, todos, setTodos }) => {
+  
   const deleteBtn = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
+  
   const editBtn = () => {};
+  
   const checkBtn = () => {
     setTodos(
       todos.map((item) => {
