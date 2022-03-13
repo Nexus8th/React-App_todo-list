@@ -6,10 +6,7 @@ const Todo = ({ setInputText, todos, setTodos, inputText }) => {
   
   const submitTodo = (e) => {
     e.preventDefault();
-    if ( inputText === undefined || inputText === "") return {
-      
-    };
-    console.log(alert);
+    if ( inputText === undefined || inputText === "" || inputText === " ") return;
     
       setTodos([
         ...todos,
