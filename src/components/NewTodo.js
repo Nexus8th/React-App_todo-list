@@ -1,6 +1,6 @@
 import Todo from "./Todo";
 
-const NewTodo = ({ todos, setTodos }) => {
+const NewTodo = ({ todos, setTodos}) => {
 
     
     return (

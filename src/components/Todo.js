@@ -1,14 +1,19 @@
-const Todo = ({ text, todo, todos, setTodos,}) => {
+const Todo = ({ text, todo, todos, setTodos}) => {
   
-  const deleteBtn = () => {
+    const deleteBtn = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
-  
-  const editBtn = () => {
-    
-   
-  };
-  
+
+  function editBtn (id, newName) {
+      const editedTodoList = todos.map (todo => {
+          if (id === todo.id) {
+            return {...todo, name: newName}
+          }
+          return todo;
+      });
+      setTodos(editedTodoList);
+  }
+
   const checkBtn = () => {
     setTodos(
       todos.map((item) => {

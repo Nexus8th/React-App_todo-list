@@ -9,18 +9,19 @@ const App = () => {
 
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
-
+  const [editTodos, setEditTodos] = useState (false);
+  
+  useEffect(() => {
+    getLocalTodos();
+  }, []);
   useEffect(() => {
     saveLocalTodos();
   });
 
-  useEffect(() => {
-    getLocalTodos();
-  }, []);
 
-  const saveLocalTodos = () => {
-    localStorage.setItem ("todos", JSON.stringify(todos));
-  };
+  function saveLocalTodos() {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }
   const getLocalTodos = () => {
     if (localStorage.getItem ("todos") === null) {
       localStorage.setItem ("todos", JSON.stringify([]));
@@ -34,7 +35,7 @@ const App = () => {
     <div>
       <Home/>
       <Logo/>
-      <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText}/>
+      <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText} editTodos={editTodos} setEditTodos={setEditTodos} />
       <NewTodo setTodos={setTodos} todos={todos}/>
     </div>
   );
