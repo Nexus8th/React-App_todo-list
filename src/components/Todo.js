@@ -34,7 +34,7 @@ const Todo = ({ text, todo, todos, setTodos}) => {
         &#10004;
       </button>
       <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
-        {text}
+        {todo.text}
       </li>
       <button onClick={editBtn} className="edit">
         &#9998;

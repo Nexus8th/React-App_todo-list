@@ -36,7 +36,7 @@ const App = () => {
       <Home/>
       <Logo/>
       <Form inputText={inputText} todos={todos} setTodos={setTodos} setInputText={setInputText} editTodos={editTodos} setEditTodos={setEditTodos} />
-      <NewTodo setTodos={setTodos} todos={todos}/>
+      <NewTodo setTodos={setTodos} todos={todos} setEditTodos={setEditTodos}/>
     </div>
   );
 };
