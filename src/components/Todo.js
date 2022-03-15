@@ -1,17 +1,18 @@
 const Todo = ({ text, todo, todos, setTodos}) => {
   
-    const deleteBtn = () => {
+  const deleteBtn = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
   };
 
-  function editBtn (id, newName) {
-      const editedTodoList = todos.map (todo => {
-          if (id === todo.id) {
-            return {...todo, name: newName}
-          }
-          return todo;
-      });
-      setTodos(editedTodoList);
+  const editBtn = () => {
+    setTodos (todos.map((obj) => {
+      if (obj.id === todo.id) {
+        return {
+          ...obj, edited: !obj.edited
+        }
+      }
+      return obj;
+    }))
   }
 
   const checkBtn = () => {
@@ -28,15 +29,24 @@ const Todo = ({ text, todo, todos, setTodos}) => {
     );
   };
 
+  function isEdited() {
+    if (todo.edited === "true") return (
+      <input type="text" value={text} className=" todo-item" onChange={(e) => e.preventDefault()}></input>)
+      else(
+        <li className={`todo-item ${todo.completed ? "completed" : ""}  ${todo.edited ? "edited" : ""}`}>{text}</li>
+      )
+  };
+
   return (
     <div className="todo">
       <button onClick={checkBtn} className="check">
         &#10004;
       </button>
-      <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
-        {todo.text}
-      </li>
-      <button onClick={editBtn} className="edit">
+
+      <li className={`todo-item ${todo.completed ? "completed" : ""}  ${todo.edited ? "edited" : ""}`}>{text}</li>
+      {/* <input type="text" value={text} className=" todo-item" onChange={(e) => e.preventDefault()}></input>  */}
+
+      <button onClick={editBtn} onChange={isEdited} className="edit">
         &#9998;
       </button>
       <button onClick={deleteBtn} className="delete">
