@@ -1,4 +1,4 @@
-const Todo = ({ text, todo, todos, setTodos}) => {
+const Todo = ({ text, todo, todos, setTodos, editTodos, setEditTodos}) => {
   
   const deleteBtn = () => {
     setTodos(todos.filter((el) => el.id !== todo.id));
@@ -29,29 +29,16 @@ const Todo = ({ text, todo, todos, setTodos}) => {
     );
   };
 
-  function isEdited() {
-    if (todo.edited === "true") return (
-      <input type="text" value={text} className=" todo-item" onChange={(e) => e.preventDefault()}></input>)
-      else(
-        <li className={`todo-item ${todo.completed ? "completed" : ""}  ${todo.edited ? "edited" : ""}`}>{text}</li>
-      )
-  };
 
   return (
     <div className="todo">
-      <button onClick={checkBtn} className="check">
-        &#10004;
-      </button>
+      <button onClick={checkBtn} className="check"> &#10004; </button>
 
       <li className={`todo-item ${todo.completed ? "completed" : ""}  ${todo.edited ? "edited" : ""}`}>{text}</li>
-      {/* <input type="text" value={text} className=" todo-item" onChange={(e) => e.preventDefault()}></input>  */}
+      {/* <input type="text" value={text} className={`todo-item ${todo.completed ? "completed" : ""}  ${todo.edited ? "edited" : ""}`}></input>  */}
 
-      <button onClick={editBtn} onChange={isEdited} className="edit">
-        &#9998;
-      </button>
-      <button onClick={deleteBtn} className="delete">
-        &#10008;
-      </button>
+      <button onClick={editBtn} className="edit"> &#9998; </button>
+      <button onClick={deleteBtn} className="delete"> &#10008; </button>
     </div>
   );
 };
